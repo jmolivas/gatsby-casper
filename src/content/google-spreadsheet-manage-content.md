@@ -1,19 +1,18 @@
 ---
-title: >-
-  How to use Google Spreadsheet to manage content and trigger a deployment of
-  your GatsbyJS site
 author: jmolivas
 excerpt: ''
 image: sheet-gatsby.jpg
-layout: post
-date: '2019-03-10'
-path: ''
+date: '2018-12-01'
 tags:
   - Source
-contentType: page
-updated_at: '2019-08-02T01:30:30.735Z'
+draft: ''
+title: >-
+  How to use Google Spreadsheet to manage content and trigger a deployment of
+  your GatsbyJS site
+updated_at: '2019-08-07T19:36:49.294Z'
+path: ''
+layout: post
 ---
-
 In early April 2019 my local meetup [Mexicali Open Source](https://mxlos.org/) was invited to talk about emerging technologies at the [Instituto Tecnológico de Mexicali](http://www.itmexicali.edu.mx/).
 
 After happily accepting the invitation, we got together to plan and build the event site and, the tool of choice was, without much surprise, GatsbyJS. The site was pretty basic and it was used to list the speaker, date, and time of each talk. To make updating the site content easier, we decided to use a Google Spreadsheet
@@ -22,8 +21,8 @@ I will list some of the benefits of using a Google Spreadsheet
 
 * Provides a GUI to edit content from Google Sheet.
 * Multiplatform access the sheet from any device.
-* Real-time collaboration by sharing the sheet with multiple people
-* Backups and version control included out-of-the-box.
+* Real\-time collaboration by sharing the sheet with multiple people
+* Backups and version control included out\-of\-the\-box.
 
 ### How was the Gatsby site implemented?
 
@@ -33,11 +32,11 @@ For this particular case, we used the [`gatsby-v2-tutorial-starter`](https://git
 
 #### The plugin configuration
 
-We decided to use the [gatsby-source-google-spreadsheet](https://www.gatsbyjs.org/packages/gatsby-source-google-spreadsheet/) plugin.
+We decided to use the [gatsby\-source\-google\-spreadsheet](https://www.gatsbyjs.org/packages/gatsby-source-google-spreadsheet/) plugin\.
 
-This plugin allows you to source all data from a Google Spreadsheet into a GraphQL type for build-time consumption.
+This plugin allows you to source all data from a Google Spreadsheet into a GraphQL type for build\-time consumption.
 
-The plugin is based on the node-sheets package and the Google Sheets API V4, which allows for better value types and column names than many of the other Gatsby Google Sheets source plugins.
+The plugin is based on the node\-sheets package and the Google Sheets API V4, which allows for better value types and column names than many of the other Gatsby Google Sheets source plugins.
 
 Authentication shown in this example is using an api key you have created in the [google developers console](https://console.developers.google.com/).
 
@@ -53,14 +52,13 @@ Plugin configuration using your `gatsby-config.js` file:
       credentials: JSON.parse(`${process.env.GOOGLE_SERVICE_ACCOUNT_CREDENTIALS}`),
   }
 },
-
 ```
 
-Note we are using a stringified version of the google-service-account data and then use the `GOOGLE_SERVICE_ACCOUNT_CREDENTIALS` environment variable in order to provide the data to the Gatsby site to avoid having the file deployed or committed by mistake on the repository.
+Note we are using a stringified version of the google\-service\-account data and then use the `GOOGLE_SERVICE_ACCOUNT_CREDENTIALS` environment variable in order to provide the data to the Gatsby site to avoid having the file deployed or committed by mistake on the repository.
 
 #### Creating the ImageSharpNode from sheet data
 
-We decided to make it simple by mapping previously uploaded speaker-avatar images with the field `avatar` stored on the sheet by adding code to `onCreateNode` at `gatsby-node.js` file.
+We decided to make it simple by mapping previously uploaded speaker\-avatar images with the field `avatar` stored on the sheet by adding code to `onCreateNode` at `gatsby-node.js` file\.
 
 ```
 if (node.internal.owner === 'gatsby-source-google-spreadsheet') {
@@ -75,7 +73,6 @@ if (node.internal.owner === 'gatsby-source-google-spreadsheet') {
 
   return;
 }
-
 ```
 
 Validate `node.internal.owner` is equal to `gatsby-source-google-spreadsheet` to affect only this node types.
@@ -91,8 +88,7 @@ Finally, add the `childrenFile` node using the `createParentChildLink` function 
 Add the GraphQL query to retrieve the sheet data ordered by date field.
 
 ```
-export const pageQuery = graphql`
-  query {
+export const pageQuery = graphql`query {
     allGoogleSpreadsheetSheet1(
      sort: { fields: [date], order: ASC }
   ) {
@@ -115,12 +111,10 @@ export const pageQuery = graphql`
         }
       }
     }
-  }
-`;
-
+  }`;
 ```
 
-Note we are using the `childrenFile`node added via the `gatsby-node.js` file.
+Note we are using the `childrenFile`node added via the `gatsby-node.js` file\.
 
 Iterating and showing the GraphQL result data on the page.
 
@@ -146,16 +140,15 @@ const Index = ({ data }) => {
     </Layout>
   );
 };
-
 ```
 
 Nothing fancy here, just usage of the `map` function to iterate and pass current item properties to the `PostList` React component.
 
-You can click here to take a look at the [PostList](https://github.com/mxlos/tecnerd/blob/master/src/components/PostList.jsx) component code.
+You can click here to take a look at the [PostList](https://github.com/mxlos/tecnerd/blob/master/src/components/PostList.jsx) component code.
 
 #### Deploying the site to Netlify without leaving your Google Spreadsheet
 
-In order to accomplish this task, it was necessary to add a script to the Google Spreadsheet. This was done by selecting the menu item `Tools` > `Script editor` and adding this code.
+In order to accomplish this task, it was necessary to add a script to the Google Spreadsheet. This was done by selecting the menu item `Tools` \> `Script editor` and adding this code.
 
 ```
 function onOpen() {
@@ -170,21 +163,21 @@ function build() {
     'method': 'post',
   })
 }
-
 ```
 
 This will add a new menu item on your Google Spreadsheet menu. By clicking this you will be able to trigger a new deploy to Netlify without leaving your sheet.
 
-![tecnerd-sheet-build.png](/sites/jmolivas/files/images/tecnerd-sheet-build.png)
+![tecnerd-sheet-build.png](firebase-cloud-function-puppeteer.jpeg)
 
-Make sure you replace the `<uuid>` placeholder with the build_hooks `uuid` value from your Netlify project.
+
+Make sure you replace the `<uuid>` placeholder with the build\_hooks `uuid` value from your Netlify project.
 
 Thanks to [Richard B. Kaufman López](https://twitter.com/sparragus) for sharing with me the initial code snippet to deploy to Netlify from a Google Spreadsheet.
 
 #### What will be great for future iterations?
 
-* Create pages for each one of the talks, this is totally doable by adding code to `createPages` at `gatsby-node.js` file.
-* Provide support to read data from diff sheet-tabs for talks, posts, social events, and others.
+* Create pages for each one of the talks, this is totally doable by adding code to `createPages` at `gatsby-node.js` file\.
+* Provide support to read data from diff sheet\-tabs for talks, posts, social events, and others.
 * Registration form using a cloud function and NoSQL storage, or maybe just sent data to a Google Spreadsheet via google form or using the API.
 * Write or extend from a theme instead of using a starter.
 

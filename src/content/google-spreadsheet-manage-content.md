@@ -5,7 +5,7 @@ image: sheet-gatsby.jpg
 date: '2018-12-01'
 tags:
   - Source
-draft: ''
+draft: false
 title: >-
   How to use Google Spreadsheet to manage content and trigger a deployment of
   your GatsbyJS site

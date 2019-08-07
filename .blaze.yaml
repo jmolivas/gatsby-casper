@@ -18,7 +18,6 @@ project:
     packager: npm
     contentDirectory:
       - src/content
-  repository: jmolivas/gatsby-casper
   type: gatsby
 schemas:
   - type: dataset
@@ -449,8 +448,6 @@ mapping:
   content:
     - schema: page
       path: src/content/welcome.md
-    - schema: page
-      path: src/content/using-gatsby.md
     - schema: page
       path: src/content/a-full-style-test.md
     - schema: page

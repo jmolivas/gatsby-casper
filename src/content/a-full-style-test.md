@@ -8,6 +8,7 @@ tags:
 title: A Full and Comprehensive Style Test
 updated_at: '2019-08-02T01:30:30.728Z'
 contentType: page
+draft: false
 ---
 Below is just about everything you’ll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.
 

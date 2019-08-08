@@ -8,7 +8,6 @@ tags:
 draft: false
 updated_at: '2019-08-02T01:30:30.740Z'
 author: gatsby
-contentType: page
 ---
 
 ## Quick Start

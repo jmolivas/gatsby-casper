@@ -1,14 +1,14 @@
 ---
 author: gatsby
+excerpt: ''
 image: img/testimg-cover.jpg
-layout: post
 date: '2018-09-30T07:03:47.149Z'
 tags:
   - Tests
+draft: true
 title: A Full and Comprehensive Style Test
-updated_at: '2019-08-02T01:30:30.728Z'
-contentType: page
-draft: false
+updated_at: '2019-08-10T08:50:41.946Z'
+layout: post
 ---
 Below is just about everything you’ll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.
 
@@ -85,8 +85,6 @@ Definition
 ---
 
 ## Table
-
-
 
 ---
 
@@ -186,5 +184,5 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 Isn't it beautiful.
 
-\[_HTML\]: Hyper Text Markup Language
+\[_HTML_\]_: Hyper Text Markup Language
 _\[CSS\]: Cascading Style Sheets

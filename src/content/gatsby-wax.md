@@ -1,4 +1,6 @@
 ---
+updated_at: '2019-08-11T20:41:55.456Z'
+author: gatsby
 image: gatsby-wax.jpg
 layout: post
 date: '2012-08-20T15:11:55.000Z'
@@ -6,9 +8,6 @@ tags:
   - Speeches
 draft: false
 title: 'Gatsby Moving Rubber Hair Wax, Purple Wild Shake'
-updated_at: '2019-08-02T01:30:30.737Z'
-author: gatsby
-contentType: page
 ---
 
 

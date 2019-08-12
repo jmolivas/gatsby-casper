@@ -2,7 +2,7 @@
 excerpt: ''
 image: img/testimg-cover.jpg
 date: '2019-08-10'
-tags: ''
+tags:
 draft: false
 title: Lorem ipsum
 author: jmolivas

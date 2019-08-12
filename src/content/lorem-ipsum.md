@@ -1,9 +1,9 @@
 ---
-excerpt: ''
-image: img/testimg-cover.jpg
-date: '2019-08-10'
-tags:
-draft: false
+excerpt: ~
+image: ~
+date: ~
+tags: ~
+draft: ~
 title: Lorem ipsum
 author: jmolivas
 updated_at: '2019-08-11T20:39:22.870Z'

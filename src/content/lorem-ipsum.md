@@ -1,11 +1,12 @@
 ---
 excerpt: null
-image: great-catsby.jpg
+image: img/testimg-cover.jpg
 date: '2019-08-12'
 tags: null
+draft: null
 title: Lorem ipsum
 author: jmolivas
-updated_at: '2019-08-13T00:47:40.088Z'
+updated_at: '2019-08-13T00:58:37.339Z'
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper mauris magna, eu aliquet mi interdum sed. Aliquam mattis, quam id commodo blandit, velit purus euismod augue, eu facilisis tellus est laoreet magna. 
 

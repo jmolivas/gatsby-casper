@@ -8,7 +8,8 @@ author: gatsby
 excerpt: ''
 image: img/testimg-cover.jpg
 layout: post
-updated_at: '2019-08-11T20:41:45.522Z'
+updated_at: '2019-08-13T00:46:09.586Z'
+contentType: page
 ---
 Below is just about everything you’ll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.
 

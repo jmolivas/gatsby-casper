@@ -1,10 +1,10 @@
 ---
 author: jmolivas
-excerpt: null
+excerpt:
 image: img/testimg-cover.jpg
 date: '2019-08-12'
-tags: null
-draft: null
+tags:
+draft:
 title: Lorem ipsum
 updated_at: '2019-08-14T02:45:26.060Z'
 ---

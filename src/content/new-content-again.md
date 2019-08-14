@@ -1,12 +1,11 @@
 ---
-author: jmolivas
-excerpt: null
-image: null
-date: null
-tags: null
-draft: null
+date:
+tags:
+draft:
 title: lalalalala
-updated_at: '2019-08-14T02:44:52.775Z'
-contentType: page
+updated_at: '2019-08-14T02:45:07.188Z'
+author: jmolivas
+excerpt:
+image:
 ---
 ![](img/writing.jpg)

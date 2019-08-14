@@ -5,10 +5,10 @@ tags:
 draft: false
 title: A Full and Comprehensive Style Test
 author: gatsby
-excerpt: ''
+excerpt:
 image: img/testimg-cover.jpg
 layout: post
-updated_at: '2019-08-13T00:46:09.586Z'
+updated_at: '2019-08-14T02:44:52.783Z'
 contentType: page
 ---
 Below is just about everything you’ll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.

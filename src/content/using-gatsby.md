@@ -4,7 +4,7 @@ tags:
   - Getting Started
 draft: false
 title: Using Gatsby
-updated_at: '2019-08-13T00:46:09.597Z'
+updated_at: '2019-08-14T02:44:52.778Z'
 author: gatsby
 image: img/writing.jpg
 layout: post

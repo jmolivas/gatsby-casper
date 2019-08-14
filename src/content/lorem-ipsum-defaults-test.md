@@ -1,12 +1,13 @@
 ---
-date:
-tags:
-draft:
+date: null
+tags: null
+draft: null
 title: 'a dummy title '
-updated_at: '2019-08-14T02:44:07.685Z'
+updated_at: '2019-08-14T02:44:52.776Z'
 author: jmolivas
-excerpt:
-image:
+excerpt: null
+image: null
+contentType: page
 ---
 text here 
 

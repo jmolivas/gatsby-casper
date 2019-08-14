@@ -1,5 +1,5 @@
 ---
-updated_at: '2019-08-13T00:46:09.607Z'
+updated_at: '2019-08-14T02:44:52.798Z'
 author: gatsby
 image: gatsby-wax.jpg
 layout: post

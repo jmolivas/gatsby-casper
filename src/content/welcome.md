@@ -4,8 +4,8 @@ tags:
   - Getting Started
 draft: false
 title: Welcome to Gatsby
-updated_at: '2019-08-13T00:46:09.591Z'
-excerpt: ''
+updated_at: '2019-08-14T02:44:52.789Z'
+excerpt:
 date: '2018-05-06'
 summary: lorem bar baz
 author: gatsby

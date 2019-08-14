@@ -1,13 +1,12 @@
 ---
+updated_at: '2019-08-14T02:45:04.639Z'
+author: jmolivas
+excerpt:
+image: img/testimg2.jpg
 date: '2019-08-13'
 tags:
 draft:
 title: Bar baz page
-author: jmolivas
-excerpt:
-image: img/testimg2.jpg
-updated_at: '2019-08-14T02:44:52.772Z'
-contentType: page
 ---
 # title
 

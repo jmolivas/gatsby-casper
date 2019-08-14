@@ -1,13 +1,12 @@
 ---
+draft: null
+title: Lorem ipsum
+updated_at: '2019-08-14T02:44:34.519Z'
+author: jmolivas
 excerpt: null
 image: img/testimg-cover.jpg
 date: '2019-08-12'
 tags: null
-draft: null
-title: Lorem ipsum
-author: jmolivas
-updated_at: '2019-08-14T02:43:24.376Z'
-contentType: page
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper mauris magna, eu aliquet mi interdum sed. Aliquam mattis, quam id commodo blandit, velit purus euismod augue, eu facilisis tellus est laoreet magna. 
 

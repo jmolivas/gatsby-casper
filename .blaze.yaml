@@ -1,10 +1,13 @@
 project:
+  type: gatsby
   status: active
   name: jmolivas/gatsby-casper
   buildStatus: ready
   external: false
   provider: github
   deployment:
+    contentDirectory:
+      - src/content
     buildCommand: gatsby build
     builds:
       master:
@@ -16,355 +19,100 @@ project:
     productionBranch: master
     publishDirectory: public
     packager: npm
-    contentDirectory:
-      - src/content
-  type: gatsby
 schemas:
   - type: dataset
     definitions:
-      schema:
-        name: Tag
-        id: tag
       fields:
-        - name: Id
-          type: string
-          required: true
-          value: ''
-          id: id
-          orderable: true
-          removable: true
-          system: false
-          widget: text
-        - system: false
-          widget: textarea
-          name: Description
-          type: string
-          required: true
-          value: ''
-          id: description
-          orderable: true
-          removable: true
-        - widget: MediaSchema
-          name: Image
-          type: string
-          required: true
-          value: ''
-          id: image
-          orderable: true
-          removable: true
-          system: false
-    schema:
-      json:
-        required:
-          - id
-          - description
-          - image
-        type: object
-        properties:
-          description:
-            title: Description
-            default: ''
-            type: string
-          id:
-            title: Id
-            default: ''
-            type: string
-          image:
-            title: Image
-            default: ''
-            type: string
-      name: Tag
-      ui:
-        image:
-          'ui:widget': MediaSchema
-        'ui:order':
-          - id
-          - description
-          - image
-          - '*'
-        description:
-          'ui:widget': textarea
-        id:
-          'ui:widget': text
-  - type: form
-    definitions:
-      fields:
-        - id: name
-          widget: text
-          name: Name
-          required: false
-          type: string
-        - id: message
-          widget: textarea
-          name: Message
-          required: false
-          type: string
-      schema:
-        id: contact
-        name: Contact
-    schema:
-      ui:
-        message:
-          'ui:widget': textarea
-        name:
-          'ui:widget': text
-        'ui:order':
-          - name
-          - message
-          - '*'
-      json:
-        required: []
-        type: object
-        properties:
-          name:
-            default: ''
-            type: string
-            title: Name
-          message:
-            default: ''
-            type: string
-            title: Message
-      name: Contact
-  - type: content
-    definitions:
-      schema:
-        name: Page
-        id: page
-      fields:
-        - type: string
-          required: true
-          value: ''
-          id: title
-          orderable: true
-          removable: true
-          system: false
-          widget: text
-          name: Title
-        - removable: true
-          system: false
-          widget: textarea
-          name: Excerpt
-          type: string
-          required: true
-          value: ''
-          id: excerpt
-          orderable: true
-        - value: ''
-          id: content
-          orderable: true
-          removable: true
-          system: false
-          widget: SlateEditor
-          name: Content
-          type: string
-          required: true
-        - type: string
-          required: true
-          value: ''
-          id: image
-          orderable: true
-          removable: true
-          system: false
-          widget: MediaSchema
-          name: Image
         - orderable: true
           removable: true
           system: false
-          widget: DatePicker
-          name: Date
-          type: string
-          required: true
-          value: ''
-          id: date
-        - orderable: true
-          removable: true
-          system: false
-          widget: text
-          name: Author
-          type: string
-          required: true
-          value: ''
-          id: author
-        - widget: text
-          name: Draft
-          type: string
-          required: true
-          value: ''
-          id: draft
-          orderable: true
-          removable: true
-          system: false
-        - orderable: true
-          removable: true
-          system: false
-          widget: text
-          name: Tags
-          type: string
-          required: true
-          value: ''
-          id: tags
-    schema:
-      json:
-        properties:
-          author:
-            default: ''
-            type: string
-            title: Author
-          excerpt:
-            default: ''
-            type: string
-            title: Excerpt
-          image:
-            default: ''
-            type: string
-            title: Image
-          content:
-            title: Content
-            default: ''
-            type: string
-          date:
-            default: ''
-            type: string
-            title: Date
-          tags:
-            default: ''
-            type: string
-            title: Tags
-          draft:
-            title: Draft
-            default: ''
-            type: string
-          title:
-            default: ''
-            type: string
-            title: Title
-        required:
-          - title
-          - excerpt
-          - content
-          - image
-          - date
-          - author
-          - draft
-          - tags
-        type: object
-      name: Page
-      ui:
-        content:
-          'ui:widget': SlateEditor
-        date:
-          'ui:widget': DatePicker
-        tags:
-          'ui:widget': text
-        draft:
-          'ui:widget': text
-        title:
-          'ui:widget': text
-        author:
-          'ui:widget': text
-        excerpt:
-          'ui:widget': textarea
-        image:
-          'ui:widget': MediaSchema
-        'ui:order':
-          - title
-          - excerpt
-          - content
-          - image
-          - date
-          - author
-          - draft
-          - tags
-          - '*'
-  - type: dataset
-    definitions:
-      schema:
-        id: author
-        name: Author
-      fields:
-        - system: false
           widget: text
           name: Id
           type: string
           required: true
           value: ''
           id: id
-          orderable: true
-          removable: true
-        - orderable: true
-          removable: true
-          system: false
-          widget: MediaSchema
+        - widget: MediaSchema
           name: Avatar
           type: string
           required: true
           value: ''
           id: avatar
-        - orderable: true
+          orderable: true
           removable: true
           system: false
-          widget: textarea
-          name: Bio
+        - name: Bio
           type: string
           required: true
           value: ''
           id: bio
-        - removable: true
+          orderable: true
+          removable: true
           system: false
-          widget: text
-          name: Facebook
+          widget: textarea
+        - name: Facebook
           type: string
           required: true
           value: ''
           id: facebook
           orderable: true
-        - name: Location
+          removable: true
+          system: false
+          widget: text
+        - orderable: true
+          removable: true
+          system: false
+          widget: text
+          name: Location
           type: string
           required: true
           value: ''
           id: location
+        - value: ''
+          id: profile_image
           orderable: true
           removable: true
-          system: false
-          widget: text
-        - removable: true
           system: false
           widget: MediaSchema
           name: Profile_image
           type: string
           required: true
-          value: ''
-          id: profile_image
-          orderable: true
-        - system: false
-          widget: text
-          name: Twiter
-          type: string
+        - type: string
           required: true
           value: ''
           id: twiter
           orderable: true
           removable: true
-        - orderable: true
-          removable: true
           system: false
           widget: text
-          name: Twitter
+          name: Twiter
+        - name: Twitter
           type: string
           required: true
           value: ''
           id: twitter
-        - type: string
-          required: true
-          value: ''
+          orderable: true
+          removable: true
+          system: false
+          widget: text
+        - value: ''
           id: website
           orderable: true
           removable: true
           system: false
           widget: text
           name: Website
+          type: string
+          required: true
+      schema:
+        name: Author
+        id: author
     schema:
       ui:
+        twiter:
+          'ui:widget': text
+        website:
+          'ui:widget': text
         twitter:
           'ui:widget': text
         facebook:
@@ -390,16 +138,35 @@ schemas:
           'ui:widget': text
         location:
           'ui:widget': text
-        twiter:
-          'ui:widget': text
-        website:
-          'ui:widget': text
       json:
+        required:
+          - id
+          - avatar
+          - bio
+          - facebook
+          - location
+          - profile_image
+          - twiter
+          - twitter
+          - website
+        type: object
         properties:
-          bio:
+          website:
+            title: Website
             default: ''
             type: string
+          twitter:
+            title: Twitter
+            default: ''
+            type: string
+          facebook:
+            title: Facebook
+            default: ''
+            type: string
+          bio:
             title: Bio
+            default: ''
+            type: string
           profile_image:
             title: Profile_image
             default: ''
@@ -420,47 +187,285 @@ schemas:
             title: Twiter
             default: ''
             type: string
-          website:
+      name: Author
+  - type: content
+    definitions:
+      schema:
+        name: Page
+        id: page
+      fields:
+        - system: false
+          widget: text
+          name: Title
+          type: string
+          required: true
+          value: ''
+          id: title
+          orderable: true
+          removable: true
+        - orderable: true
+          removable: true
+          system: false
+          widget: textarea
+          name: Excerpt
+          type: string
+          required: false
+          value: ''
+          id: excerpt
+        - removable: true
+          system: false
+          widget: SlateEditor
+          name: Content
+          type: string
+          required: true
+          value: ''
+          id: content
+          orderable: true
+        - removable: true
+          system: false
+          widget: MediaSchema
+          name: Image
+          type: string
+          required: true
+          value: ''
+          id: image
+          orderable: true
+        - removable: true
+          system: false
+          widget: DatePicker
+          name: Date
+          type: string
+          required: true
+          value: ''
+          id: date
+          orderable: true
+        - value: ''
+          id: author
+          orderable: true
+          removable: true
+          system: false
+          widget: text
+          name: Author
+          type: string
+          required: true
+        - widget: text
+          name: Tags
+          type: string
+          required: false
+          value: ''
+          id: tags
+          orderable: true
+          removable: true
+          system: false
+        - widget: checkbox
+          name: Draft
+          required: false
+          type: boolean
+          id: draft
+    schema:
+      json:
+        required:
+          - title
+          - content
+          - image
+          - date
+          - author
+        type: object
+        properties:
+          excerpt:
+            title: Excerpt
             default: ''
             type: string
-            title: Website
-          twitter:
+          image:
             default: ''
             type: string
-            title: Twitter
-          facebook:
+            title: Image
+          content:
             default: ''
             type: string
-            title: Facebook
+            title: Content
+          date:
+            title: Date
+            default: ''
+            type: string
+          tags:
+            title: Tags
+            default: ''
+            type: string
+          draft:
+            title: Draft
+            default: ''
+            type: boolean
+          title:
+            title: Title
+            default: ''
+            type: string
+          author:
+            title: Author
+            default: ''
+            type: string
+      name: Page
+      ui:
+        date:
+          'ui:widget': DatePicker
+        tags:
+          'ui:widget': text
+        draft:
+          'ui:widget': checkbox
+        title:
+          'ui:widget': text
+        author:
+          'ui:widget': text
+        excerpt:
+          'ui:widget': textarea
+        image:
+          'ui:widget': MediaSchema
+        'ui:order':
+          - title
+          - excerpt
+          - content
+          - image
+          - date
+          - author
+          - tags
+          - draft
+          - '*'
+        content:
+          'ui:widget': SlateEditor
+  - type: form
+    definitions:
+      fields:
+        - required: false
+          type: string
+          id: name
+          widget: text
+          name: Name
+        - required: false
+          type: string
+          id: message
+          widget: textarea
+          name: Message
+      schema:
+        id: contact
+        name: Contact
+    schema:
+      json:
+        required: []
+        type: object
+        properties:
+          message:
+            title: Message
+            default: ''
+            type: string
+          name:
+            default: ''
+            type: string
+            title: Name
+      name: Contact
+      ui:
+        message:
+          'ui:widget': textarea
+        name:
+          'ui:widget': text
+        'ui:order':
+          - name
+          - message
+          - '*'
+  - type: dataset
+    definitions:
+      fields:
+        - orderable: true
+          removable: true
+          system: false
+          widget: text
+          name: Id
+          type: string
+          required: true
+          value: ''
+          id: id
+        - orderable: true
+          removable: true
+          system: false
+          widget: textarea
+          name: Description
+          type: string
+          required: true
+          value: ''
+          id: description
+        - system: false
+          widget: MediaSchema
+          name: Image
+          type: string
+          required: true
+          value: ''
+          id: image
+          orderable: true
+          removable: true
+      schema:
+        id: tag
+        name: Tag
+    schema:
+      ui:
+        image:
+          'ui:widget': MediaSchema
+        'ui:order':
+          - id
+          - description
+          - image
+          - '*'
+        description:
+          'ui:widget': textarea
+        id:
+          'ui:widget': text
+      json:
+        properties:
+          id:
+            default: ''
+            type: string
+            title: Id
+          image:
+            title: Image
+            default: ''
+            type: string
+          description:
+            title: Description
+            default: ''
+            type: string
         required:
           - id
-          - avatar
-          - bio
-          - facebook
-          - location
-          - profile_image
-          - twiter
-          - twitter
-          - website
+          - description
+          - image
         type: object
-      name: Author
+      name: Tag
 mapping:
   content:
     - schema: page
-      path: src/content/welcome.md
+      path: src/content/2019-08-14-jsx-example.md
+    - schema: page
+      path: src/content/lorem-ipsum-defaults-test.md
     - schema: page
       path: src/content/a-full-style-test.md
     - schema: page
-      path: src/content/google-spreadsheet-manage-content.md
+      path: src/content/bar-baz-page.md
     - schema: page
       path: src/content/how-run-puppeteer-headless-chrome.md
     - schema: page
-      path: src/content/gatsby-wax.md
+      path: src/content/using-gatsby.md
+    - schema: page
+      path: src/content/welcome.md
+    - schema: page
+      path: src/content/new-content-again.md
+    - schema: page
+      path: src/content/lorem-ipsum.md
+    - schema: page
+      path: src/content/google-spreadsheet-manage-content.md
     - schema: page
       path: src/content/great-catsby.md
+    - schema: page
+      path: src/content/gatsby-wax.md
   dataset:
-    - schema: author
-      path: src/content/author.yaml
     - schema: tag
       path: src/content/tag.yaml
+    - schema: author
+      path: src/content/author.yaml
   form: []

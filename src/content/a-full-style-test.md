@@ -1,6 +1,6 @@
 ---
 author: gatsby
-excerpt:
+excerpt: null
 image: img/testimg-cover.jpg
 date: '2018-09-30T07:03:47.149Z'
 tags:
@@ -8,7 +8,8 @@ tags:
 draft: false
 title: A Full and Comprehensive Style Test
 layout: post
-updated_at: '2019-08-14T02:45:12.254Z'
+updated_at: '2019-08-15T01:05:28.548Z'
+contentType: page
 ---
 Below is just about everything you’ll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.
 

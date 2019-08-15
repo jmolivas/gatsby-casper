@@ -4,14 +4,15 @@ title: >-
   How to use Google Spreadsheet to manage content and trigger a deployment of
   your GatsbyJS site
 author: jmolivas
-excerpt:
+excerpt: null
 image: sheet-gatsby.jpg
 date: '2019-08-01'
 tags:
   - Source
-path:
+path: null
 layout: post
-updated_at: '2019-08-14T02:45:15.702Z'
+updated_at: '2019-08-15T01:05:28.549Z'
+contentType: page
 ---
 In early April 2019 my local meetup [Mexicali Open Source](https://mxlos.org/) was invited to talk about emerging technologies at the [Instituto Tecnológico de Mexicali](http://www.itmexicali.edu.mx/).
 

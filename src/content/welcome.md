@@ -1,6 +1,6 @@
 ---
-updated_at: '2019-08-14T02:45:22.398Z'
-excerpt:
+updated_at: '2019-08-15T01:05:28.546Z'
+excerpt: null
 date: '2018-05-06'
 summary: lorem bar baz
 author: gatsby
@@ -10,6 +10,7 @@ tags:
   - Getting Started
 draft: false
 title: Welcome to Gatsby
+contentType: page
 ---
 👋 Welcome, it's great to have you here.
 

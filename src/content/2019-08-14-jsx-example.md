@@ -1,12 +1,12 @@
 ---
 date: '2019-08-14'
 tags:
-draft: true
+draft:
 title: jsx example
 author: jmolivas
 excerpt:
 image: gatsby-wax.jpg
-updated_at: '2019-08-15T01:23:31.370Z'
+updated_at: '2019-08-15T01:24:11.494Z'
 ---
 <Slider title="lorem"\>
   <Image path=gatsby\-wax.jpg" /\>

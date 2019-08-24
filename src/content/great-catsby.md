@@ -3,7 +3,7 @@ author: jmolivas
 excerpt:
 image: img/testimg-cover.jpg
 date: '2019-08-08'
-tags: speeches
+tags:
 draft:
 title: The Great Catsby
 updated_at: '2019-08-24T23:29:44.089Z'

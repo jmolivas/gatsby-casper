@@ -1,22 +1,17 @@
 ---
-draft: false
+date: '2019-08-01'
+draft:
 title: >-
   How to use Google Spreadsheet to manage content and trigger a deployment of
   your GatsbyJS site
 author: jmolivas
-excerpt: null
+excerpt:
 image: sheet-gatsby.jpg
-date: '2019-08-01'
-tags:
-  - Source
-path: null
-layout: post
-updated_at: '2019-08-15T01:05:28.549Z'
-contentType: page
+updated_at: '2019-08-25T17:06:08.364Z'
 ---
 In early April 2019 my local meetup [Mexicali Open Source](https://mxlos.org/) was invited to talk about emerging technologies at the [Instituto Tecnológico de Mexicali](http://www.itmexicali.edu.mx/).
 
-![alt text](img/testimg-cover.jpg)
+![alt text](img/alex-knight-326705-unsplash.jpg)
 
 
 After happily accepting the invitation, we got together to plan and build the event site and, the tool of choice was, without much surprise, GatsbyJS. The site was pretty basic and it was used to list the speaker, date, and time of each talk. To make updating the site content easier, we decided to use a Google Spreadsheet

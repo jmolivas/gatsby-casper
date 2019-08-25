@@ -6,8 +6,8 @@ title: >-
   your GatsbyJS site
 author: jmolivas
 excerpt:
-image: sheet-gatsby.jpg
-updated_at: '2019-08-25T17:06:08.364Z'
+image: img/marvin-meyer-794521-unsplash.jpg
+updated_at: '2019-08-25T17:31:34.503Z'
 ---
 In early April 2019 my local meetup [Mexicali Open Source](https://mxlos.org/) was invited to talk about emerging technologies at the [Instituto Tecnológico de Mexicali](http://www.itmexicali.edu.mx/).
 

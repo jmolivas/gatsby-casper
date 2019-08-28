@@ -1,5 +1,5 @@
 ---
-updated_at: '2019-08-15T01:05:28.546Z'
+updated_at: '2019-08-28T17:53:21.590Z'
 excerpt: null
 date: '2018-05-06'
 summary: lorem bar baz

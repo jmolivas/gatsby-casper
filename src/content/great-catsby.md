@@ -1,6 +1,6 @@
 ---
 date: '2019-08-25'
-tags: '["Getting Started"]'
+tags: ["Getting Started"]
 draft: null
 title: The Great Catsby
 author: jmolivas

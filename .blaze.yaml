@@ -1,7 +1,4 @@
 project:
-  type: gatsby
-  status: active
-  name: jmolivas/gatsby-casper
   buildStatus: ready
   external: false
   provider: github
@@ -11,84 +8,113 @@ project:
     buildCommand: gatsby build
     builds:
       master:
-        id: _dcqnjp279
-        environmentVariables: []
         branch: master
         weight: 1
+        id: _dcqnjp279
+        environmentVariables: []
     developmentCommand: gatsby develop
     productionBranch: master
     publishDirectory: public
     packager: npm
+  type: gatsby
+  status: active
+  name: jmolivas/gatsby-casper
 schemas:
   - definitions:
       fields:
-        - required: false
-          type: string
-          id: name
+        - value: ''
+          id: id
+          orderable: true
+          removable: true
+          system: false
           widget: text
-          name: Name
-        - widget: textarea
-          name: Message
-          required: false
+          name: Id
           type: string
-          id: message
+          required: true
+        - value: ''
+          id: description
+          orderable: true
+          removable: true
+          system: false
+          widget: textarea
+          name: Description
+          type: string
+          required: true
+        - orderable: true
+          removable: true
+          system: false
+          widget: MediaSchema
+          name: Image
+          type: string
+          required: true
+          value: ''
+          id: image
       schema:
-        name: Contact
-        id: contact
+        id: tag
+        name: Tag
     schema:
+      json:
+        properties:
+          description:
+            title: Description
+            default: ''
+            type: string
+          id:
+            default: ''
+            type: string
+            title: Id
+          image:
+            default: ''
+            type: string
+            title: Image
+        required:
+          - id
+          - description
+          - image
+        type: object
+      name: Tag
       ui:
         'ui:order':
-          - name
-          - message
+          - id
+          - description
+          - image
           - '*'
-        message:
+        description:
           'ui:widget': textarea
-        name:
+        id:
           'ui:widget': text
-      json:
-        required: []
-        type: object
-        properties:
-          message:
-            default: ''
-            type: string
-            title: Message
-          name:
-            default: ''
-            type: string
-            title: Name
-      name: Contact
-    type: form
-  - type: content
-    definitions:
+        image:
+          'ui:widget': MediaSchema
+    type: dataset
+  - definitions:
       fields:
-        - orderable: true
+        - value: ''
+          id: title
+          orderable: true
           removable: true
           system: false
           widget: text
           name: Title
           type: string
           required: true
-          value: ''
-          id: title
-        - type: string
+        - widget: textarea
+          name: Excerpt
+          type: string
           required: false
           value: ''
           id: excerpt
           orderable: true
           removable: true
           system: false
-          widget: textarea
-          name: Excerpt
-        - removable: true
-          system: false
-          widget: SlateEditor
+        - widget: SlateEditor
           name: Content
           type: string
           required: true
           value: ''
           id: content
           orderable: true
+          removable: true
+          system: false
         - removable: true
           system: false
           widget: MediaSchema
@@ -98,7 +124,8 @@ schemas:
           value: ''
           id: image
           orderable: true
-        - removable: true
+        - orderable: true
+          removable: true
           system: false
           widget: DatePicker
           name: Date
@@ -106,25 +133,71 @@ schemas:
           required: true
           value: ''
           id: date
+        - value: ''
+          id: author
           orderable: true
-        - orderable: true
           removable: true
           system: false
           widget: text
           name: Author
           type: string
           required: true
-          value: ''
-          id: author
-        - widget: checkbox
+        - widget: collection
+          name: Tags
+          required: false
+          type: string
+          id: tags
+        - id: draft
+          widget: checkbox
           name: Draft
           required: false
           type: boolean
-          id: draft
       schema:
         id: page
         name: Page
     schema:
+      json:
+        required:
+          - title
+          - content
+          - image
+          - date
+          - author
+        type: object
+        properties:
+          author:
+            default: ''
+            type: string
+            title: Author
+          excerpt:
+            title: Excerpt
+            default: ''
+            type: string
+          image:
+            title: Image
+            default: ''
+            type: string
+          content:
+            default: ''
+            type: string
+            title: Content
+          date:
+            default: ''
+            type: string
+            title: Date
+          tags:
+            title: Tags
+            default: ''
+            type: string
+          draft:
+            title: Draft
+            default: ''
+            type: boolean
+          title:
+            title: Title
+            default: ''
+            type: string
+      name: Page
       ui:
         author:
           'ui:widget': text
@@ -139,114 +212,115 @@ schemas:
           - image
           - date
           - author
+          - tags
           - draft
           - '*'
         content:
           'ui:widget': SlateEditor
         date:
           'ui:widget': DatePicker
+        tags:
+          'ui:widget': collection
         draft:
           'ui:widget': checkbox
         title:
           'ui:widget': text
-      json:
-        required:
-          - title
-          - content
-          - image
-          - date
-          - author
-        type: object
-        properties:
-          author:
-            title: Author
-            default: ''
-            type: string
-          excerpt:
-            title: Excerpt
-            default: ''
-            type: string
-          image:
-            title: Image
-            default: ''
-            type: string
-          content:
-            title: Content
-            default: ''
-            type: string
-          date:
-            default: ''
-            type: string
-            title: Date
-          draft:
-            title: Draft
-            default: ''
-            type: boolean
-          title:
-            default: ''
-            type: string
-            title: Title
-      name: Page
-  - type: dataset
+    type: content
+  - type: form
     definitions:
       schema:
-        name: Author
-        id: author
+        id: contact
+        name: Contact
       fields:
-        - orderable: true
+        - id: name
+          widget: text
+          name: Name
+          required: false
+          type: string
+        - widget: textarea
+          name: Message
+          required: false
+          type: string
+          id: message
+    schema:
+      json:
+        required: []
+        type: object
+        properties:
+          message:
+            title: Message
+            default: ''
+            type: string
+          name:
+            title: Name
+            default: ''
+            type: string
+      name: Contact
+      ui:
+        message:
+          'ui:widget': textarea
+        name:
+          'ui:widget': text
+        'ui:order':
+          - name
+          - message
+          - '*'
+  - definitions:
+      fields:
+        - value: ''
+          id: id
+          orderable: true
           removable: true
           system: false
           widget: text
           name: Id
           type: string
           required: true
-          value: ''
-          id: id
-        - name: Avatar
-          type: string
-          required: true
-          value: ''
+        - value: ''
           id: avatar
           orderable: true
           removable: true
           system: false
           widget: MediaSchema
-        - name: Bio
+          name: Avatar
+          type: string
+          required: true
+        - removable: true
+          system: false
+          widget: textarea
+          name: Bio
           type: string
           required: true
           value: ''
           id: bio
           orderable: true
-          removable: true
-          system: false
-          widget: textarea
-        - orderable: true
-          removable: true
-          system: false
-          widget: text
-          name: Facebook
+        - name: Facebook
           type: string
           required: true
           value: ''
           id: facebook
-        - removable: true
+          orderable: true
+          removable: true
           system: false
           widget: text
+        - widget: text
           name: Location
           type: string
           required: true
           value: ''
           id: location
           orderable: true
-        - name: Profile_image
+          removable: true
+          system: false
+        - removable: true
+          system: false
+          widget: MediaSchema
+          name: Profile_image
           type: string
           required: true
           value: ''
           id: profile_image
           orderable: true
-          removable: true
-          system: false
-          widget: MediaSchema
         - orderable: true
           removable: true
           system: false
@@ -256,7 +330,8 @@ schemas:
           required: true
           value: ''
           id: twiter
-        - type: string
+        - name: Twitter
+          type: string
           required: true
           value: ''
           id: twitter
@@ -264,16 +339,18 @@ schemas:
           removable: true
           system: false
           widget: text
-          name: Twitter
-        - widget: text
+        - orderable: true
+          removable: true
+          system: false
+          widget: text
           name: Website
           type: string
           required: true
           value: ''
           id: website
-          orderable: true
-          removable: true
-          system: false
+      schema:
+        name: Author
+        id: author
     schema:
       json:
         required:
@@ -293,25 +370,25 @@ schemas:
             type: string
             title: Website
           twitter:
+            default: ''
+            type: string
             title: Twitter
-            default: ''
-            type: string
           facebook:
+            default: ''
+            type: string
             title: Facebook
-            default: ''
-            type: string
           bio:
+            title: Bio
             default: ''
             type: string
-            title: Bio
           profile_image:
             default: ''
             type: string
             title: Profile_image
           avatar:
-            title: Avatar
             default: ''
             type: string
+            title: Avatar
           id:
             title: Id
             default: ''
@@ -321,9 +398,9 @@ schemas:
             default: ''
             type: string
           twiter:
-            title: Twiter
             default: ''
             type: string
+            title: Twiter
       name: Author
       ui:
         avatar:
@@ -355,91 +432,26 @@ schemas:
           - '*'
         profile_image:
           'ui:widget': MediaSchema
-  - type: dataset
-    definitions:
-      fields:
-        - orderable: true
-          removable: true
-          system: false
-          widget: text
-          name: Id
-          type: string
-          required: true
-          value: ''
-          id: id
-        - widget: textarea
-          name: Description
-          type: string
-          required: true
-          value: ''
-          id: description
-          orderable: true
-          removable: true
-          system: false
-        - name: Image
-          type: string
-          required: true
-          value: ''
-          id: image
-          orderable: true
-          removable: true
-          system: false
-          widget: MediaSchema
-      schema:
-        name: Tag
-        id: tag
-    schema:
-      json:
-        required:
-          - id
-          - description
-          - image
-        type: object
-        properties:
-          image:
-            title: Image
-            default: ''
-            type: string
-          description:
-            default: ''
-            type: string
-            title: Description
-          id:
-            title: Id
-            default: ''
-            type: string
-      name: Tag
-      ui:
-        'ui:order':
-          - id
-          - description
-          - image
-          - '*'
-        description:
-          'ui:widget': textarea
-        id:
-          'ui:widget': text
-        image:
-          'ui:widget': MediaSchema
+    type: dataset
 mapping:
   content:
-    - schema: page
-      path: src/content/google-spreadsheet-manage-content.md
-    - schema: page
-      path: src/content/great-catsby.md
     - schema: page
       path: src/content/welcome.md
     - schema: page
       path: src/content/using-gatsby.md
     - schema: page
+      path: src/content/a-full-style-test.md
+    - schema: page
+      path: src/content/great-catsby.md
+    - schema: page
       path: src/content/how-run-puppeteer-headless-chrome.md
     - schema: page
-      path: src/content/a-full-style-test.md
+      path: src/content/google-spreadsheet-manage-content.md
     - schema: page
       path: src/content/gatsby-wax.md
   dataset:
-    - schema: tag
-      path: src/content/tag.yaml
     - schema: author
       path: src/content/author.yaml
+    - schema: tag
+      path: src/content/tag.yaml
   form: []

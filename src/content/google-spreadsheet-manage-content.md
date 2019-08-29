@@ -7,7 +7,7 @@ title: >-
 author: jmolivas
 excerpt: null
 image: sheet-gatsby.jpg
-updated_at: '2019-08-28T17:53:20.617Z'
+updated_at: '2019-08-29T01:28:29.500Z'
 contentType: page
 ---
 In early April 2019 my local meetup [Mexicali Open Source](https://mxlos.org/) was invited to talk about emerging technologies at the [Instituto Tecnológico de Mexicali](http://www.itmexicali.edu.mx/).

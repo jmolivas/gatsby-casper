@@ -6,7 +6,7 @@ date: '2019-01-01'
 tags: []
 draft: false
 title: How to run Puppeteer using Cloud Functions
-updated_at: '2019-08-28T17:53:21.578Z'
+updated_at: '2019-08-29T01:28:29.496Z'
 path: null
 contentType: page
 ---

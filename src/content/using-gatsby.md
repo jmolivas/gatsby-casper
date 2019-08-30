@@ -1,13 +1,13 @@
 ---
+date: '2015-02-02'
+tags:
+  - Getting Started
 draft:
 title: Using Gatsby
 author: gatsby
 excerpt:
 image: img/writing.jpg
-date: '2015-02-02'
-tags:
-  - Getting Started
-updated_at: '2019-08-29T01:51:23.225Z'
+updated_at: '2019-08-30T23:40:34.754Z'
 ---
 
 ## Quick Start

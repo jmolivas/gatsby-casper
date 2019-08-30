@@ -1,5 +1,6 @@
 ---
 date: '2019-08-30'
+tags: '[]'
 draft:
 title: >-
   How to use Google Spreadsheet to manage content and trigger a deployment of
@@ -7,7 +8,7 @@ title: >-
 author: jmolivas
 excerpt:
 image: sheet-gatsby.jpg
-updated_at: '2019-08-30T23:08:38.890Z'
+updated_at: '2019-08-30T23:41:02.045Z'
 ---
 In early April 2019 my local meetup [Mexicali Open Source](https://mxlos.org/) was invited to talk about emerging technologies at the [Instituto Tecnológico de Mexicali](http://www.itmexicali.edu.mx/).
 

@@ -1,6 +1,6 @@
 ---
 date: '2019-08-30'
-tags: ~
+tags: []
 draft:
 title: >-
   How to use Google Spreadsheet to manage content and trigger a deployment of

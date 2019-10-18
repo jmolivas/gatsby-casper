@@ -1,7 +1,7 @@
 import { lighten, setLightness, darken, setSaturation } from 'polished';
 import * as React from 'react';
 import styled from '@emotion/styled';
-import rehypeReact from 'rehype-react';
+import RehypeReact from 'rehype-react';
 
 import { colors } from '../styles/colors';
 
@@ -386,7 +386,6 @@ export const PostFullContent = styled.section`
   /* Taken from overreacted https://github.com/gaearon/overreacted.io/blob/942b41555f5e5ccbb5f93f6c26142cd90b314236/src/utils/global.css#L68 */
   code[class*='language-'],
   pre[class*='language-'] {
-    color: white;
     background: none;
     font-family: Consolas, Menlo, Monaco, source-code-pro, Courier New, monospace;
     font-feature-settings: normal;
@@ -545,7 +544,7 @@ export const PostFullContent = styled.section`
   /* End Syntax Highlighting */
 `;
 
-const renderAst = new rehypeReact({
+const renderAst = new RehypeReact({
   createElement: React.createElement,
   // components: { 'interactive-counter': Counter },
   components: {},
@@ -560,7 +559,7 @@ export interface PostContentProps {
   htmlAst: any;
 }
 
-const PostContent: React.FunctionComponent<PostContentProps> = ({ htmlAst }) => {
+const PostContent: React.FC<PostContentProps> = ({ htmlAst }) => {
   return (
     <PostFullContent className="post-full-content">
       {/* TODO: this will apply the class when rehype-react is published https://github.com/rhysd/rehype-react/pull/11 */}

@@ -2,14 +2,15 @@ const path = require('path');
 
 module.exports = {
   siteMetadata: {
-    title: 'GatsbyJS',
-    description: 'Gatsby is a free and open source framework based on React that helps developers build blazing fast websites and apps',
+    title: 'Ghost',
+    description: 'The professional publishing platform',
     siteUrl: 'https://gatsby-casper.netlify.com', // full path to blog - no ending slash
   },
   mapping: {
     'MarkdownRemark.frontmatter.author': 'AuthorYaml',
   },
   plugins: [
+    'gatsby-plugin-sitemap',
     'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-source-filesystem',
@@ -28,18 +29,6 @@ module.exports = {
               wrapperStyle: 'margin-bottom: 1rem',
             },
           },
-          {
-            resolve: `@raae/gatsby-remark-oembed`,
-            options: {
-              providers: {
-                include: [
-                  'YouTube',
-                  'Vimeo',
-                ]
-              },
-            },
-          },
-          '@weknow/gatsby-remark-twitter',
           'gatsby-remark-prismjs',
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',

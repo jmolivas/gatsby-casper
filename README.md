@@ -5,8 +5,22 @@ Demo: https://gatsby-casper.netlify.com/
 This is a static blog generator and starter gatsby repo. A port of [Casper](https://github.com/TryGhost/Casper) v2 a theme from [Ghost](https://ghost.org/) for [GatsbyJS](https://www.gatsbyjs.org/) using [TypeScript](https://www.typescriptlang.org/).
 
 ## Getting Started
+Clone this repo.
+
+```
+git clone https://github.com/scttcper/gatsby-casper.git --depth=1
+```
+
+Remove .git folder and setup a new one
+
+```
+rm -rf .git && git init
+```
+
 Edit website-config.ts with your website settings.
 Either disable subscribe or setup a mailchimp list and add the form action and hidden field input name.
+
+Now push to whatever repo you want!
 
 
 ### Progress
@@ -21,11 +35,11 @@ Either disable subscribe or setup a mailchimp list and add the form action and h
   - [ ] floating reading progress bar
 - [x] 404 page
 - [x] subscribe modal/overlay
-- [x] rss feed
+- [x] rss feed (on production build)
 - [x] polish ✨
   - [x] meta tags
   - [x] page titles
-
+  - [x] pagination
 
 ### Deploy to Netlify
 
@@ -57,7 +71,7 @@ Edit `gatsby-config.js` and add your tracking ID
   },
 ```
 
-## How to edit your site title and description 
+## How to edit your site title and description
 Edit `gatsby-config.js` section `siteMetadata`
 
 ```javascript
@@ -67,3 +81,7 @@ Edit `gatsby-config.js` section `siteMetadata`
     siteUrl: 'https://mysite.com', // full path to blog - no ending slash
   },
 ```
+
+## How to adjust pagination
+In `gatsby-node.js`, edit the `postsPerPage` constant. The default value is
+six posts per page.

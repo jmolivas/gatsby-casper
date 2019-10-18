@@ -146,18 +146,18 @@ interface PageTemplateProps {
           id: string;
           bio: string;
           avatar: {
-            children: {
+            children: Array<{
               fixed: {
                 src: string;
               };
-            }[];
+            }>;
           };
         };
       };
     };
     relatedPosts: {
       totalCount: number;
-      edges: {
+      edges: Array<{
         node: {
           timeToRead: number;
           frontmatter: {
@@ -167,7 +167,7 @@ interface PageTemplateProps {
             slug: string;
           };
         };
-      }[];
+      }>;
     };
   };
   pageContext: {
@@ -196,17 +196,17 @@ export interface PageContext {
       id: string;
       bio: string;
       avatar: {
-        children: {
+        children: Array<{
           fixed: {
             src: string;
           };
-        }[];
+        }>;
       };
     };
   };
 }
 
-const PageTemplate: React.FunctionComponent<PageTemplateProps> = props => {
+const PageTemplate: React.FC<PageTemplateProps> = props => {
   const post = props.data.markdownRemark;
   let width = '';
   let height = '';
@@ -243,7 +243,7 @@ const PageTemplate: React.FunctionComponent<PageTemplateProps> = props => {
         <meta name="twitter:title" content={post.frontmatter.title} />
         <meta name="twitter:description" content={post.excerpt} />
         <meta name="twitter:url" content={config.siteUrl + props.pathContext.slug} />
-        {(post.frontmatter.image && post.frontmatter.image.childImageSharp)&& (
+        {(post.frontmatter.image && post.frontmatter.image.childImageSharp) && (
           <meta name="twitter:image" content={`${config.siteUrl}${post.frontmatter.image.childImageSharp.fluid.src}`} />
         )}
         <meta name="twitter:label1" content="Written by" />
@@ -281,7 +281,7 @@ const PageTemplate: React.FunctionComponent<PageTemplateProps> = props => {
                           {post.frontmatter.tags[0]}
                         </Link>
                       </>
-                    )}
+                  )}
                 </PostFullMeta>
                 <PostFullTitle>{post.frontmatter.title}</PostFullTitle>
               </PostFullHeader>
@@ -330,7 +330,7 @@ export default PageTemplate;
 
 export const query = graphql`
   query($slug: String, $primaryTag: String) {
-    logo: file(relativePath: { eq: "img/gatsby-logo.png" }) {
+    logo: file(relativePath: { eq: "img/ghost-logo.png" }) {
       childImageSharp {
         fixed {
           ...GatsbyImageSharpFixed

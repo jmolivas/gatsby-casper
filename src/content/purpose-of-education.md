@@ -1,11 +1,14 @@
 ---
 layout: post
-title: "The Purpose of Education"
+title: The Purpose of Education
 author: Ghost
-tags: ["Speeches"]
+tags:
+  - Speeches
 image: img/demo4.jpg
-date: "2012-08-20T15:11:55.000Z"
+date: '2012-08-20T15:11:55.000Z'
 draft: false
+contentType: page
+updated_at: '2019-10-18T18:24:45.731Z'
 ---
 
 

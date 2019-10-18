@@ -2,12 +2,13 @@
 date: '2015-02-02'
 tags:
   - Getting Started
-draft:
+draft: null
 title: Using Gatsby
 author: gatsby
-excerpt:
+excerpt: null
 image: img/writing.jpg
-updated_at: '2019-08-30T23:40:34.754Z'
+updated_at: '2019-10-18T18:24:45.708Z'
+contentType: page
 ---
 
 ## Quick Start

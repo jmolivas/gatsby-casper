@@ -1,10 +1,12 @@
 ---
-title: "Great Gatsby"
 author: Another Author
+excerpt:
+image: img/testimg-cover.jpg
+date: '1922-12-12T10:00:00.000Z'
 tags: []
-image: img/marvin-meyer-794521-unsplash.jpg
-date: "1922-12-12T10:00:00.000Z"
-draft: false
+draft:
+title: Great Gatsby
+updated_at: '2019-10-18T18:44:10.477Z'
 ---
 
 In my younger and more vulnerable years my father gave me some advice that I’ve been turning over in my mind ever since.

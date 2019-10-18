@@ -8,7 +8,7 @@ tags:
 draft: false
 title: A Full and Comprehensive Style Test
 layout: post
-updated_at: '2019-08-29T01:28:29.502Z'
+updated_at: '2019-10-18T18:24:45.705Z'
 contentType: page
 ---
 Below is just about everything you’ll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.

@@ -1,11 +1,14 @@
 ---
 layout: post
-title: "Using The Ghost Editor"
+title: Using The Ghost Editor
 author: Ghost
-tags: ["Getting Started"]
+tags:
+  - Getting Started
 image: img/writing.jpg
-date: "2015-02-02T23:46:37.121Z"
+date: '2015-02-02T23:46:37.121Z'
 draft: false
+contentType: page
+updated_at: '2019-10-18T18:24:45.711Z'
 ---
 
 Ghost uses a language called **Markdown** to format text.

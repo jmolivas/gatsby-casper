@@ -1,14 +1,13 @@
 ---
 author: jmolivas
-excerpt: null
+excerpt:
 image: great-catsby.jpg
-date: '2019-08-30'
+date: '2019-08-01'
 tags:
   - Getting Started
-draft: null
+draft:
 title: The Great Catsby
-updated_at: '2019-10-18T18:24:45.714Z'
-contentType: page
+updated_at: '2020-05-13T19:25:36.500Z'
 ---
 > “Whenever you feel like criticizing any one,” he told me, “just remember that all the people in this world haven’t had the advantages that you’ve had.”
 

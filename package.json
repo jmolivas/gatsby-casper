@@ -9,6 +9,7 @@
     "build": "gatsby build",
     "clean": "rimraf public",
     "dev": "gatsby develop -H 0.0.0.0",
+    "develop": "gatsby develop -H 0.0.0.0",
     "lint": "eslint src/**/**/*.tsx",
     "lint:fix": "eslint --fix src/**/*/*.tsx",
     "start": "npm run dev",
